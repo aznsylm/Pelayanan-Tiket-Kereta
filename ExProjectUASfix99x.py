@@ -1,4 +1,12 @@
+'''PROJECT KELOMPOK 
+- AIZAN SYALIM
+- ANDRIAN PRIMA NUR SAHPUTRA
+- RADEN MUHAMMAD LUKMAN HARJITO '''
+
+
 def pertama():
+
+    ### TABEL UNTUK INFORMASI KETERANGAN RUTE,CLASS DAN HARGA
     def tabel():
         print('\n\t    Selamat Datang di KAI access')  
         print('   Berikut List Rute berdasarkan Class dan Harga')
@@ -35,18 +43,23 @@ def pertama():
         print(J333["rute"],J333["class"],J333["harga"])
         print("+","="*15,"+","="*20,"+","="*5,"+")
     tabel()    
+    ### TABEL UNTUK INFORMASI KETERANGAN RUTE,CLASS DAN HARGA
 
+    ### KONFIRMASI PEMESANAN TIKET
     def welcome() :
         awal=input('\nApakah anda ingin melakukan pemesanan tiket YA/TIDAK : ')
-        if awal=='YA' or awal == 'ya':
+        if awal=='YA' or 'ya':
             print('')
-        elif awal=='TIDAK' or awal == 'tidak' :
-            pertama()
+        elif awal=='TIDAK' or 'tidak' :
+            welcome()
         else:
             print('Pilihan tidak sesuai!')
             print('Silahakan memilih YA / TIDAK')
             welcome()
     welcome()
+    ### END KONFIRMASI PEMESANAN TIKET
+
+
     ### TUNAI
     def tunai():
         print("\n")
@@ -81,19 +94,24 @@ def pertama():
         print('TERIMA KASIH TELAH MELAKUKAN PEMESANAN TIKET')
         print("="*40,'\n')
     ### END NON TUNAI
+
+    ### INPUTAN UNTUK NAMA DAN NOMOR 
     print('='*40)
     nama =input('Silahkan masukan Nama Anda : ')
     print('NAMA :',nama)
     nomor=int(input('Silahkan masukan Nomor Whatsapp Anda : '))
     print('NOMOR WHATSAPP ANDA : +62',nomor)
     print('='*40)
+    ### END INPUTAN UNTUK NAMA DAN NOMOR 
     
-    
+    ### PENJABARAN UNTUK RUTE
     RuteKereta=['1.Yogyakarta(LPN) - Surabaya(SGU)','2.Yogyakarta(LPN) - Jakarta(GMR)','3.Yogyakarta(LPN) - Bandung(PDL)\n']
     print('\nBERIKUT ADALAH RUTE KAI HARI INI')
     for menu1 in RuteKereta:
         print(menu1)
+    ### ENd PENJABARAN RUTE
 
+    ### PENYIMPANAN VARIABEL GLOBAL
     def rute() :
         global pilihclass
         global menurute
@@ -102,7 +120,8 @@ def pertama():
         global hasil
 
         menurute=int(input('Silahkan memasukan angka berdasarkan rute perjalanan: '))
-### JOGJA - SURABAYA
+
+        ### JOGJA - SURABAYA
         if menurute == 1 :
             menurute = 'Yogyakarta (LPN) - Surabaya (SGU)'
             print('\nPILIHAN KERETA TUJUAN YOGYAKARTA - SURABAYA: ')
@@ -113,11 +132,13 @@ def pertama():
                 kereta = 'Pasundan (18.35)'
                 print("Rute Yogyakarta - Surabaya, Kereta Pasundan (18.35)")
                 
+                ### PEMILIHAN CLASS
                 print('\nTiket kereta berdasarkan class')
                 menuPemesanan = ['1. Eksekutif','2. Bisnis','3. Ekonomi']
                 for menu2 in menuPemesanan:
                     print(menu2)
                 pilihclass = int(input('Masukan angka berdasarkan angka kelas yg tersedia: '))
+
                 ### EKSEKUTIF
                 if pilihclass == 1:
                     pilihclass = "Eksekutif Class"
@@ -228,11 +249,13 @@ def pertama():
                 kereta = 'Gaya Baru Malam Selatan (20.10)'
                 print("Rute Yogyakarta - Surabaya, Kereta Gaya Baru Malam Selatan (20.10)")
 
+                ### PEMILIHAN CLASS
                 print('\nTiket kereta berdasarkan class')
                 menuPemesanan = ['1. Eksekutif','2. Bisnis','3. Ekonomi']
                 for menu2 in menuPemesanan:
                     print(menu2)
                 pilihclass = int(input('Masukan angka berdasarkan angka kelas yg tersedia: '))
+
                 ### EKSEKUTIF
                 if pilihclass == 1:
                     pilihclass = "Eksekutif Class"
@@ -342,7 +365,7 @@ def pertama():
             else:
                 print("Pilihan tidak tersedia")
                 rute()
-### END JOGJA - SURABAYA
+    ### END JOGJA - SURABAYA
 
 ### JOGJA - JAKARTA
         elif menurute == 2 :
@@ -356,11 +379,13 @@ def pertama():
                 kereta = 'Gajayana (20.14)'
                 print("Rute Yogyakarta - Jakarta, Kereta Gajayana (20.14)")
                 
+                ### PEMILIHAN CLASS
                 print('\nTiket kereta berdasarkan class')
                 menuPemesanan = ['1. Eksekutif','2. Bisnis','3. Ekonomi']
                 for menu2 in menuPemesanan:
                     print(menu2)
                 pilihclass = int(input('Masukan angka berdasarkan angka kelas yg tersedia: '))
+
                 ### EKSEKUTIF
                 if pilihclass == 1:
                     pilihclass = "Eksekutif Class"
@@ -603,11 +628,13 @@ def pertama():
                 kereta = 'Mutiara Selatan Priority (22.05)'
                 print("Rute Yogyakarta - Bandung, Mutiara Selatan Priority (22.05)")
                 
+                ### PEMILIHAN CLASS
                 print('\nTiket kereta berdasarkan class')
                 menuPemesanan = ['1. Eksekutif','2. Bisnis','3. Ekonomi']
                 for menu2 in menuPemesanan:
                     print(menu2)
                 pilihclass = int(input('Masukan angka berdasarkan angka kelas yg tersedia: '))
+                
                 ### EKSEKUTIF
                 if pilihclass == 1:
                     pilihclass = "Eksekutif Class"
